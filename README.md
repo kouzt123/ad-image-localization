@@ -31,7 +31,7 @@ These are all visible in the rabbit example above and below.
 
 - **Text is always right.** Real fonts mean no misspelled or melted glyphs, correctly joined Arabic, and phrase-aware Japanese line breaks. (The GPT edition's own README notes that image generation "can still distort small text, logos, hands, faces, or dense UI".)
 - **Pixel-identical brand assets.** The logo, character and product are cut from the source, not redrawn.
-- **Every size is a real layout.** `320x50`, `728x90`, `160x600`, `970x250`: GPT Image can't generate these ratios, so the GPT edition crops or skips them.
+- **Every size gets its own layout.** GPT Image generates a few native ratios; the GPT edition reaches other sizes with a quick, deterministic safe cover-crop from the nearest anchor (e.g. 1200x628 from 16:9), which works well for nearby ratios. For extreme ratios such as `320x50`, `728x90` or `160x600`, a crop keeps only a slice of the composition, while the code edition lays out logo, headline, CTA and subject from scratch for that size.
 - **Deterministic and re-renderable.** `creative.html` + `copy/<lang>.json` is an editable master. Adding a language means adding one JSON file, and 48 renders take about a minute.
 - **Automated QA on every render:** text overflow, off-canvas text, type size, overlaps, text over faces or products (alpha-aware), story safe zones, and **WCAG contrast against the pixels actually behind the text**. A recorded visual review and a release gate come on top.
 - **No image model or API.** Everything runs locally.
