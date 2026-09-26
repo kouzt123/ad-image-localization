@@ -1,0 +1,277 @@
+{
+  "source": "source/rabbit-social-networks.png",
+  "inpaint_engine": "lama",
+  "mask_dilate": 8,
+  "components": [
+    {
+      "id": "rabbit",
+      "role": "hero",
+      "box": [
+        365,
+        505,
+        775,
+        1200
+      ],
+      "cutout": "rembg"
+    },
+    {
+      "id": "logo_mark",
+      "role": "logo",
+      "box": [
+        57,
+        64,
+        214,
+        219
+      ],
+      "cutout": "rounded:34"
+    },
+    {
+      "id": "sticker_heart",
+      "role": "decor",
+      "box": [
+        578,
+        218,
+        698,
+        340
+      ],
+      "cutout": "bgkey"
+    },
+    {
+      "id": "sticker_friends",
+      "role": "decor",
+      "box": [
+        1078,
+        566,
+        1200,
+        688
+      ],
+      "cutout": "bgkey"
+    },
+    {
+      "id": "sticker_smile",
+      "role": "decor",
+      "box": [
+        1054,
+        930,
+        1200,
+        1072
+      ],
+      "cutout": "rembg"
+    },
+    {
+      "id": "feed_photo",
+      "role": "ui-asset",
+      "image": "work/source_deskew.png",
+      "box": [
+        702,
+        420,
+        1068,
+        664
+      ],
+      "cutout": "rect"
+    },
+    {
+      "id": "avatar_1",
+      "role": "ui-asset",
+      "image": "work/source_deskew.png",
+      "box": [
+        792,
+        237,
+        832,
+        277
+      ],
+      "cutout": "ellipse"
+    },
+    {
+      "id": "avatar_2",
+      "role": "ui-asset",
+      "image": "work/source_deskew.png",
+      "box": [
+        860,
+        237,
+        900,
+        277
+      ],
+      "cutout": "ellipse"
+    },
+    {
+      "id": "avatar_3",
+      "role": "ui-asset",
+      "image": "work/source_deskew.png",
+      "box": [
+        923,
+        237,
+        963,
+        277
+      ],
+      "cutout": "ellipse"
+    },
+    {
+      "id": "avatar_4",
+      "role": "ui-asset",
+      "image": "work/source_deskew.png",
+      "box": [
+        988,
+        237,
+        1028,
+        277
+      ],
+      "cutout": "ellipse"
+    },
+    {
+      "id": "avatar_5",
+      "role": "ui-asset",
+      "image": "work/source_deskew.png",
+      "box": [
+        1051,
+        237,
+        1091,
+        277
+      ],
+      "cutout": "ellipse"
+    },
+    {
+      "id": "avatar_lily",
+      "role": "ui-asset",
+      "image": "work/source_deskew.png",
+      "box": [
+        716,
+        353,
+        754,
+        391
+      ],
+      "cutout": "ellipse"
+    },
+    {
+      "id": "avatar_mike",
+      "role": "ui-asset",
+      "image": "work/source_deskew.png",
+      "box": [
+        739,
+        819,
+        777,
+        857
+      ],
+      "cutout": "ellipse"
+    },
+    {
+      "id": "mini_photo_1",
+      "role": "ui-asset",
+      "image": "work/source_deskew.png",
+      "box": [
+        778,
+        940,
+        896,
+        974
+      ],
+      "cutout": "rect"
+    },
+    {
+      "id": "mini_photo_2",
+      "role": "ui-asset",
+      "image": "work/source_deskew.png",
+      "box": [
+        921,
+        944,
+        1022,
+        978
+      ],
+      "cutout": "rect"
+    }
+  ],
+  "texts": [
+    {
+      "id": "brand_name",
+      "role": "brand",
+      "text": "Rabbit",
+      "box": [
+        243,
+        84,
+        527,
+        166
+      ],
+      "mask": "ink",
+      "dilate": 6,
+      "fill": "smooth"
+    },
+    {
+      "id": "brand_sub",
+      "role": "brand",
+      "text": "Social Networks",
+      "box": [
+        243,
+        164,
+        574,
+        214
+      ],
+      "mask": "ink",
+      "dilate": 6,
+      "fill": "smooth"
+    },
+    {
+      "id": "headline",
+      "role": "headline",
+      "text": "Meet friends faster",
+      "box": [
+        56,
+        260,
+        550,
+        628
+      ],
+      "mask": "ink",
+      "dilate": 8,
+      "fill": "smooth"
+    },
+    {
+      "id": "cta",
+      "role": "cta",
+      "text": "Start free",
+      "box": [
+        36,
+        652,
+        404,
+        774
+      ],
+      "mask": "box",
+      "dilate": 6
+    }
+  ],
+  "plate_extra_masks": [
+    [
+      [
+        742,
+        104
+      ],
+      [
+        1162,
+        134
+      ],
+      [
+        1188,
+        190
+      ],
+      [
+        1130,
+        1148
+      ],
+      [
+        1070,
+        1162
+      ],
+      [
+        650,
+        1106
+      ],
+      [
+        618,
+        1060
+      ],
+      [
+        690,
+        146
+      ]
+    ]
+  ],
+  "plate_work_side": 384,
+  "plate_soften": 1.2
+}

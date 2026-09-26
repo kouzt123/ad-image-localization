@@ -1,0 +1,43 @@
+{
+  "schema_version": 2,
+  "default_profile": "standard-delivery",
+  "notes": "Code-reconstruction edition: every format is rendered directly from the HTML reconstruction (html_render), so extreme ratios such as 320x50 are first-class renders, not crops.",
+  "formats": {
+    "square-1x1": {"aspect_ratio": "1:1", "default_size": "1200x1200", "production_method": "html_render"},
+    "landscape-16x9": {"aspect_ratio": "16:9", "default_size": "1920x1080", "production_method": "html_render"},
+    "portrait-4x5": {"aspect_ratio": "4:5", "default_size": "1080x1350", "production_method": "html_render"},
+    "story-9x16": {"aspect_ratio": "9:16", "default_size": "1080x1920", "production_method": "html_render"},
+    "social-link-1.91x1": {"aspect_ratio": "300:157", "default_size": "1200x628", "production_method": "html_render"},
+    "iab-mrec-300x250": {"aspect_ratio": "6:5", "default_size": "300x250", "production_method": "html_render"},
+    "iab-leaderboard-728x90": {"aspect_ratio": "364:45", "default_size": "728x90", "production_method": "html_render"},
+    "iab-mobile-banner-320x50": {"aspect_ratio": "32:5", "default_size": "320x50", "production_method": "html_render"},
+    "iab-large-mobile-320x100": {"aspect_ratio": "16:5", "default_size": "320x100", "production_method": "html_render"},
+    "iab-skyscraper-160x600": {"aspect_ratio": "4:15", "default_size": "160x600", "production_method": "html_render"},
+    "iab-half-page-300x600": {"aspect_ratio": "1:2", "default_size": "300x600", "production_method": "html_render"},
+    "iab-billboard-970x250": {"aspect_ratio": "97:25", "default_size": "970x250", "production_method": "html_render"}
+  },
+  "profiles": {
+    "standard-delivery": {
+      "description": "Common social/ad ratios: 1:1, 16:9, 4:5, 9:16 and the 1.91:1 link image.",
+      "formats": ["square-1x1", "landscape-16x9", "portrait-4x5", "story-9x16", "social-link-1.91x1"]
+    },
+    "social-core": {
+      "description": "Common square, portrait feed, and vertical story ratios.",
+      "formats": ["square-1x1", "portrait-4x5", "story-9x16"]
+    },
+    "google-ads-image-assets": {
+      "description": "Broad Google Ads image-asset set without guessing a campaign subtype (1:1, 1.91:1, plus 16:9).",
+      "formats": ["square-1x1", "landscape-16x9", "social-link-1.91x1"],
+      "source": "https://support.google.com/google-ads/answer/13676244",
+      "checked_at": "2026-07-14"
+    },
+    "iab-display": {
+      "description": "Standard IAB display banners, including extreme ratios.",
+      "formats": ["iab-mrec-300x250", "iab-leaderboard-728x90", "iab-mobile-banner-320x50", "iab-large-mobile-320x100", "iab-skyscraper-160x600", "iab-half-page-300x600", "iab-billboard-970x250"]
+    },
+    "full-pack": {
+      "description": "standard-delivery + iab-display.",
+      "formats": ["square-1x1", "landscape-16x9", "portrait-4x5", "story-9x16", "social-link-1.91x1", "iab-mrec-300x250", "iab-leaderboard-728x90", "iab-mobile-banner-320x50", "iab-large-mobile-320x100", "iab-skyscraper-160x600", "iab-half-page-300x600", "iab-billboard-970x250"]
+    }
+  }
+}

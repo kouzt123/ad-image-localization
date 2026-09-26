@@ -1,0 +1,11 @@
+# Installed by scripts/setup.sh. simple-lama-inpainting is installed separately with
+# --no-deps because its metadata pins pillow<10, which conflicts with rembg; it runs
+# fine on current Pillow.
+pillow>=10.0
+numpy
+opencv-python-headless
+rembg[cpu]
+playwright
+torch
+torchvision
+fire

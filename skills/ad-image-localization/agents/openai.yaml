@@ -1,0 +1,7 @@
+interface:
+  display_name: "Ad Image Localization"
+  short_description: "Localize and resize ad images by rebuilding them in code"
+  icon_small: "assets/icon-small.svg"
+  icon_large: "assets/logo.svg"
+  brand_color: "#2563EB"
+  default_prompt: "Use $ad-image-localization to preflight this creative, decompose it into layers, rebuild it as a responsive HTML page, render every language x size, and release only after DOM QA and recorded visual QA pass."

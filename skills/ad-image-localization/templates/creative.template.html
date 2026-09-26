@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CREATIVE_SLUG — responsive creative</title>
+<!-- Pick the closest Google Fonts per script; keep display=block so renders never use fallbacks. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Noto+Sans+JP:wght@500;700;900&family=Noto+Sans+Arabic:wght@500;700;800&display=block" rel="stylesheet">
+<style>
+/* ---------------------------------------------------------------- tokens (measure from the source) */
+:root {
+  --ink: #0c1f5e;              /* headline colour */
+  --accent: #1670ea;           /* <em> colour */
+  --cta-top: #62d443; --cta-bottom: #2c9a1c; --cta-text: #fff;
+  --font-display: "Nunito", system-ui, sans-serif;
+  --hero-aspect: 840 / 1100;   /* hero group box measured in the source */
+}
+:lang(ja) { --font-display: "Noto Sans JP", sans-serif; }
+:lang(ar) { --font-display: "Noto Sans Arabic", sans-serif; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 100%; height: 100%; overflow: hidden; background: #888; }
+body { -webkit-font-smoothing: antialiased; }
+#ad { position: fixed; inset: 0; overflow: hidden; }
+.plate { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: var(--plate-pos, 50% 50%); }
+/* RTL plate mirroring (text-free plates only) happens in background.js via S.cover({flip}) */
+
+.brand { position: absolute; z-index: 5; display: flex; align-items: center; gap: 2vmin; }
+.brand .mark { width: var(--mark, 12vmin); height: auto; display: block; }
+
+.headline { position: absolute; z-index: 4; display: flex; align-items: var(--hl-valign, flex-start);
+  font-family: var(--font-display); font-weight: 900; color: var(--ink); line-height: .95; text-wrap: balance; }
+.headline > span { display: block; width: 100%; }
+.headline em { font-style: normal; color: var(--accent); }
+.headline .nowrap { white-space: nowrap; }
+:lang(ja) .headline, :lang(zh) .headline, :lang(ko) .headline { word-break: auto-phrase; line-break: strict; line-height: 1.12; }
+:lang(ar) .headline { line-height: 1.25; }
+
+.cta { position: absolute; z-index: 6; display: flex; align-items: center; justify-content: center; white-space: nowrap;
+  padding: 0 .9em; border-radius: 999px; font-family: var(--font-display); font-weight: 800; color: var(--cta-text);
+  background: linear-gradient(180deg, var(--cta-top), var(--cta-bottom)); box-shadow: 0 .5vmin 1.6vmin rgba(0,0,0,.25); }
+
+.hero { position: absolute; aspect-ratio: var(--hero-aspect); z-index: 3; }
+.hero > * { position: absolute; }
+.subject { inset-inline-start: 0%; top: 0%; width: 100%; }   /* % positions inside the hero, from layers.json */
+
+/* ================================================================ LAYOUTS
+   Required per layout: .brand, .headline, .cta, .hero. Use inset-inline-* only. */
+[data-layout="square"]    .brand    { inset-inline-start: 5vw; top: 5vh; }
+[data-layout="square"]    .headline { inset-inline-start: 5vw; top: 22vh; width: 44vw; height: 32vh; font-size: 11vmin; }
+[data-layout="square"]    .cta      { inset-inline-start: 5vw; top: 58vh; width: 30vw; height: 9vh; font-size: 5vmin; }
+[data-layout="square"]    .hero     { inset-inline-end: 0; bottom: 0; width: 60vw; }
+
+[data-layout="landscape"] .brand    { inset-inline-start: 4vw; top: 7vh; --mark: 14vh; }
+[data-layout="landscape"] .headline { inset-inline-start: 4vw; top: 29vh; width: 48vw; height: 42vh; font-size: 15vh; }
+[data-layout="landscape"] .cta      { inset-inline-start: 4vw; top: 76vh; width: 56vh; height: 13vh; font-size: 6.4vh; }
+[data-layout="landscape"] .hero     { inset-inline-end: 2vw; top: 3vh; height: 100vh; }
+
+[data-layout="portrait"]  .brand    { inset-inline-start: 5vw; top: 4.5vh; }
+[data-layout="portrait"]  .headline { inset-inline-start: 5vw; top: 19vh; width: 50vw; height: 31vh; font-size: 12vw; }
+[data-layout="portrait"]  .cta      { inset-inline-start: 5vw; top: 53vh; width: 36vw; height: 8vh; font-size: 5.8vw; }
+[data-layout="portrait"]  .hero     { inset-inline-end: -4vw; bottom: -4vh; width: 80vw; }
+
+[data-layout="story"]     .brand    { inset-inline-start: 7vw; top: 14.5vh; }        /* keep text in 13%..80% */
+[data-layout="story"]     .headline { inset-inline-start: 7vw; top: 23vh; width: 86vw; height: 17vh; font-size: 13vw; }
+[data-layout="story"]     .cta      { inset-inline-start: 7vw; top: 42vh; width: 46vw; height: 6vh; font-size: 6vw; }
+[data-layout="story"]     .hero     { inset-inline-end: -4vw; bottom: -1vh; width: 92vw; }
+
+[data-layout="skyscraper"] .brand    { inset-inline-start: 0; width: 100vw; top: 3vh; justify-content: center; --mark: 44vw; }
+[data-layout="skyscraper"] .headline { inset-inline-start: 7vw; width: 86vw; top: 22vh; height: 24vh; font-size: 20vw; text-align: center; }
+[data-layout="skyscraper"] .cta      { inset-inline-start: 8vw; width: 84vw; bottom: 3.5vh; height: 7.5vh; font-size: 11vw; }
+[data-layout="skyscraper"] .hero     { inset-inline-start: 5vw; top: 50vh; width: 90vw; }
+
+[data-layout="billboard"] .brand    { inset-inline-start: 3vw; top: 9vh; --mark: 36vh; }
+[data-layout="billboard"] .headline { inset-inline-start: 3.4vw; top: 54vh; width: 48vw; height: 38vh; font-size: 30vh; --hl-valign: center; }
+[data-layout="billboard"] .cta      { inset-inline-end: 3vw; top: 35vh; width: 21vw; height: 30vh; font-size: 12vh; }
+[data-layout="billboard"] .hero     { inset-inline-start: 55vw; top: -20vh; height: 160vh; }
+
+[data-layout="strip"]     .brand    { inset-inline-start: 1.6vw; top: 14vh; --mark: 72vh; }
+[data-layout="strip"]     .headline { inset-inline-start: calc(1.6vw + 80vh); top: 10vh; height: 80vh; width: calc(100vw - 80vh - 30vw); font-size: 42vh; --hl-valign: center; line-height: 1.05; }
+[data-layout="strip"]     .cta      { inset-inline-end: 2vw; top: 22vh; width: 22vw; height: 56vh; font-size: 24vh; padding: 0 .6em; }
+[data-layout="strip"]     .hero     { display: none; }
+</style>
+</head>
+<body>
+<div id="ad">
+  <canvas class="plate" id="scene"></canvas>   <!-- painted by background.js -->
+  <div class="brand"><img class="mark" src="work/layers/logo_mark.png" alt=""></div>
+  <h1 class="headline" data-fit data-fit-min="8"><span data-copy="headline"></span></h1>
+  <div class="cta" data-fit="line" data-fit-min="7" data-copy="cta" data-qa-solid></div>
+  <div class="hero">
+    <img class="subject" src="work/layers/hero.png" alt="" data-qa="keepout" data-name="hero">
+  </div>
+</div>
+<script src="scene-kit.js"></script>
+<script src="background.js"></script>
+<script src="ad-runtime.js"></script>
+</body>
+</html>

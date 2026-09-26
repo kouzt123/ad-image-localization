@@ -1,0 +1,350 @@
+{
+  "source": "source/rabbit-social-networks.png",
+  "size": [
+    1200,
+    1200
+  ],
+  "plates": {
+    "native": {
+      "file": "plate.png",
+      "aspect": 1.0
+    }
+  },
+  "components": [
+    {
+      "id": "rabbit",
+      "file": "rabbit.png",
+      "role": "hero",
+      "px": [
+        372,
+        508,
+        380,
+        692
+      ],
+      "rel": {
+        "left": 0.31,
+        "top": 0.42333,
+        "width": 0.31667,
+        "height": 0.57667
+      },
+      "aspect": 0.54913,
+      "text_slots": []
+    },
+    {
+      "id": "logo_mark",
+      "file": "logo_mark.png",
+      "role": "logo",
+      "px": [
+        57,
+        64,
+        157,
+        155
+      ],
+      "rel": {
+        "left": 0.0475,
+        "top": 0.05333,
+        "width": 0.13083,
+        "height": 0.12917
+      },
+      "aspect": 1.0129,
+      "text_slots": []
+    },
+    {
+      "id": "sticker_heart",
+      "file": "sticker_heart.png",
+      "role": "decor",
+      "px": [
+        585,
+        225,
+        106,
+        109
+      ],
+      "rel": {
+        "left": 0.4875,
+        "top": 0.1875,
+        "width": 0.08833,
+        "height": 0.09083
+      },
+      "aspect": 0.97248,
+      "text_slots": []
+    },
+    {
+      "id": "sticker_friends",
+      "file": "sticker_friends.png",
+      "role": "decor",
+      "px": [
+        1088,
+        566,
+        109,
+        118
+      ],
+      "rel": {
+        "left": 0.90667,
+        "top": 0.47167,
+        "width": 0.09083,
+        "height": 0.09833
+      },
+      "aspect": 0.92373,
+      "text_slots": []
+    },
+    {
+      "id": "sticker_smile",
+      "file": "sticker_smile.png",
+      "role": "decor",
+      "px": [
+        1063,
+        939,
+        131,
+        126
+      ],
+      "rel": {
+        "left": 0.88583,
+        "top": 0.7825,
+        "width": 0.10917,
+        "height": 0.105
+      },
+      "aspect": 1.03968,
+      "text_slots": []
+    },
+    {
+      "id": "feed_photo",
+      "file": "feed_photo.png",
+      "role": "ui-asset",
+      "px": [
+        702,
+        420,
+        366,
+        244
+      ],
+      "rel": {
+        "left": 0.585,
+        "top": 0.35,
+        "width": 0.305,
+        "height": 0.20333
+      },
+      "aspect": 1.5,
+      "text_slots": []
+    },
+    {
+      "id": "avatar_1",
+      "file": "avatar_1.png",
+      "role": "ui-asset",
+      "px": [
+        792,
+        237,
+        40,
+        40
+      ],
+      "rel": {
+        "left": 0.66,
+        "top": 0.1975,
+        "width": 0.03333,
+        "height": 0.03333
+      },
+      "aspect": 1.0,
+      "text_slots": []
+    },
+    {
+      "id": "avatar_2",
+      "file": "avatar_2.png",
+      "role": "ui-asset",
+      "px": [
+        860,
+        237,
+        40,
+        40
+      ],
+      "rel": {
+        "left": 0.71667,
+        "top": 0.1975,
+        "width": 0.03333,
+        "height": 0.03333
+      },
+      "aspect": 1.0,
+      "text_slots": []
+    },
+    {
+      "id": "avatar_3",
+      "file": "avatar_3.png",
+      "role": "ui-asset",
+      "px": [
+        923,
+        237,
+        40,
+        40
+      ],
+      "rel": {
+        "left": 0.76917,
+        "top": 0.1975,
+        "width": 0.03333,
+        "height": 0.03333
+      },
+      "aspect": 1.0,
+      "text_slots": []
+    },
+    {
+      "id": "avatar_4",
+      "file": "avatar_4.png",
+      "role": "ui-asset",
+      "px": [
+        988,
+        237,
+        40,
+        40
+      ],
+      "rel": {
+        "left": 0.82333,
+        "top": 0.1975,
+        "width": 0.03333,
+        "height": 0.03333
+      },
+      "aspect": 1.0,
+      "text_slots": []
+    },
+    {
+      "id": "avatar_5",
+      "file": "avatar_5.png",
+      "role": "ui-asset",
+      "px": [
+        1051,
+        237,
+        40,
+        40
+      ],
+      "rel": {
+        "left": 0.87583,
+        "top": 0.1975,
+        "width": 0.03333,
+        "height": 0.03333
+      },
+      "aspect": 1.0,
+      "text_slots": []
+    },
+    {
+      "id": "avatar_lily",
+      "file": "avatar_lily.png",
+      "role": "ui-asset",
+      "px": [
+        716,
+        353,
+        38,
+        38
+      ],
+      "rel": {
+        "left": 0.59667,
+        "top": 0.29417,
+        "width": 0.03167,
+        "height": 0.03167
+      },
+      "aspect": 1.0,
+      "text_slots": []
+    },
+    {
+      "id": "avatar_mike",
+      "file": "avatar_mike.png",
+      "role": "ui-asset",
+      "px": [
+        739,
+        819,
+        38,
+        38
+      ],
+      "rel": {
+        "left": 0.61583,
+        "top": 0.6825,
+        "width": 0.03167,
+        "height": 0.03167
+      },
+      "aspect": 1.0,
+      "text_slots": []
+    },
+    {
+      "id": "mini_photo_1",
+      "file": "mini_photo_1.png",
+      "role": "ui-asset",
+      "px": [
+        778,
+        940,
+        118,
+        34
+      ],
+      "rel": {
+        "left": 0.64833,
+        "top": 0.78333,
+        "width": 0.09833,
+        "height": 0.02833
+      },
+      "aspect": 3.47059,
+      "text_slots": []
+    },
+    {
+      "id": "mini_photo_2",
+      "file": "mini_photo_2.png",
+      "role": "ui-asset",
+      "px": [
+        921,
+        944,
+        101,
+        34
+      ],
+      "rel": {
+        "left": 0.7675,
+        "top": 0.78667,
+        "width": 0.08417,
+        "height": 0.02833
+      },
+      "aspect": 2.97059,
+      "text_slots": []
+    }
+  ],
+  "texts": [
+    {
+      "id": "brand_name",
+      "role": "brand",
+      "source_text": "Rabbit",
+      "style": {},
+      "rel": {
+        "left": 0.2025,
+        "top": 0.07,
+        "width": 0.23667,
+        "height": 0.06833
+      }
+    },
+    {
+      "id": "brand_sub",
+      "role": "brand",
+      "source_text": "Social Networks",
+      "style": {},
+      "rel": {
+        "left": 0.2025,
+        "top": 0.13667,
+        "width": 0.27583,
+        "height": 0.04167
+      }
+    },
+    {
+      "id": "headline",
+      "role": "headline",
+      "source_text": "Meet friends faster",
+      "style": {},
+      "rel": {
+        "left": 0.04667,
+        "top": 0.21667,
+        "width": 0.41167,
+        "height": 0.30667
+      }
+    },
+    {
+      "id": "cta",
+      "role": "cta",
+      "source_text": "Start free",
+      "style": {},
+      "rel": {
+        "left": 0.03,
+        "top": 0.54333,
+        "width": 0.30667,
+        "height": 0.10167
+      }
+    }
+  ]
+}

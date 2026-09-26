@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-labelledby="title">
+  <title id="title">Ad Image Localization</title>
+  <rect width="48" height="48" rx="11" fill="#2563EB"/>
+  <rect x="8.5" y="10.5" width="22" height="18" rx="3" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+  <circle cx="14.5" cy="16.5" r="2.5" fill="#93C5FD"/>
+  <path d="m10 26 6-6 4.5 4 3-2.5 5.5 4.5" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M27 34h12m0 0-4-4m4 4-4 4M38 14H26m0 0 4-4m-4 4 4 4" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

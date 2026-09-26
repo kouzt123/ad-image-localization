@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/kouzt123/ad-image-localization-claude/job.schema.json",
+  "title": "Ad Image Localization Job",
+  "type": "object",
+  "required": ["creative_slug", "source", "languages"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "creative_slug": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$"},
+    "source": {"type": "string", "minLength": 1},
+    "languages": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "oneOf": [
+          {"type": "string", "pattern": "^[A-Za-z]{2,3}(-[A-Za-z0-9]+)?$"},
+          {
+            "type": "object",
+            "required": ["locale"],
+            "properties": {
+              "locale": {"type": "string"},
+              "market": {"type": "string"}
+            },
+            "additionalProperties": false
+          }
+        ]
+      }
+    },
+    "profile": {"type": "string"},
+    "formats": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "protected_terms": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "rtl_mode": {"enum": ["auto", "rtl-aware", "copy-only"]},
+    "output": {
+      "type": "object",
+      "properties": {
+        "dir": {"type": "string"},
+        "extension": {"enum": ["png", "jpg", "jpeg", "webp"]}
+      },
+      "additionalProperties": false
+    },
+    "output_dir": {"type": "string"},
+    "output_extension": {"enum": ["png", "jpg", "jpeg", "webp"]},
+    "date": {"type": "string", "pattern": "^[0-9]{8}$"},
+    "extra_exports": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["format", "size"],
+        "properties": {
+          "format": {"type": "string"},
+          "size": {"type": "string", "pattern": "^[0-9]+x[0-9]+$"}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

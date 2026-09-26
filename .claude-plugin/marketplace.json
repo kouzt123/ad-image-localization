@@ -1,0 +1,12 @@
+{
+  "name": "kouzt123-ad-image-localization",
+  "owner": {"name": "kouzt123", "url": "https://github.com/kouzt123"},
+  "plugins": [
+    {
+      "name": "ad-image-localization",
+      "source": "./",
+      "description": "Localize and resize ad image creatives by rebuilding them in code (no image model).",
+      "version": "1.0.0"
+    }
+  ]
+}

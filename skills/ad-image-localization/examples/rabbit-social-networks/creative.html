@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Rabbit Social Networks — responsive creative</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=M+PLUS+Rounded+1c:wght@500;800&family=Baloo+Bhaijaan+2:wght@600;800&family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+Arabic:wght@400;500;700&display=block" rel="stylesheet">
+<style>
+/* ------------------------------------------------------------------ tokens
+   Measured from source/rabbit-social-networks.png (1200x1200).            */
+:root {
+  --navy: #0c1f5e;
+  --accent: #1670ea;
+  --brand-blue: #123a9c;
+  --cta-top: #62d443;
+  --cta-bottom: #2c9a1c;
+  --ui-text: #1b2333;
+  --ui-muted: #6b7486;
+  --ui-blue: #2f7cf6;
+  --ui-line: #e8edf4;
+  --font-display: "Nunito", "Arial Rounded MT Bold", system-ui, sans-serif;
+  --font-brand: "Nunito", system-ui, sans-serif;
+  --font-ui: "Inter", system-ui, sans-serif;
+  --hero-aspect: 840 / 1100;   /* hero group box in source: x360-1200, y100-1200 */
+}
+:lang(ja) { --font-display: "M PLUS Rounded 1c", "Noto Sans JP", sans-serif; --font-ui: "Noto Sans JP", sans-serif; }
+:lang(ar) { --font-display: "Baloo Bhaijaan 2", "Noto Sans Arabic", sans-serif; --font-ui: "Noto Sans Arabic", sans-serif; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 100%; height: 100%; overflow: hidden; background: #8cc8f5; }
+body { -webkit-font-smoothing: antialiased; text-rendering: geometricPrecision; }
+
+#ad { position: fixed; inset: 0; overflow: hidden; }
+.plate { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: var(--plate-pos, 50% 50%); }
+
+/* ------------------------------------------------------------------ copy */
+.brand { position: absolute; display: flex; align-items: center; gap: var(--brand-gap, 2.4vmin); z-index: 5; }
+.brand .mark { width: var(--mark, 13vmin); height: auto; display: block; filter: drop-shadow(0 .5vmin 1vmin rgba(10,50,140,.25)); }
+.wordmark { display: flex; flex-direction: column; font-family: var(--font-brand); line-height: .95; direction: ltr; text-align: left; }
+.wordmark .name { font-weight: 900; color: var(--navy); font-size: var(--brand-size, 8.4vmin); letter-spacing: -.01em; }
+.wordmark .sub { font-weight: 800; color: var(--brand-blue); font-size: calc(var(--brand-size, 8.4vmin) * .49); margin-top: .3em; }
+
+.headline {
+  position: absolute; z-index: 4;
+  font-family: var(--font-display); font-weight: 900; color: var(--navy);
+  line-height: .92; letter-spacing: -.012em; text-wrap: balance;
+  display: flex; align-items: var(--hl-valign, flex-start);
+  text-shadow: 0 .2vmin 1.2vmin rgba(255,255,255,.35);
+}
+.headline > span { display: block; width: 100%; }
+.headline em { font-style: normal; color: var(--accent); }
+.headline .nowrap { white-space: nowrap; }
+/* CJK: break only between phrases (Chrome 119+), never inside words like 早く. */
+:lang(ja) .headline, :lang(zh) .headline, :lang(ko) .headline { word-break: auto-phrase; line-break: strict; }
+:lang(ja) .headline { line-height: 1.12; letter-spacing: 0; font-weight: 800; }
+:lang(ar) .headline { line-height: 1.25; letter-spacing: 0; font-weight: 800; }
+:lang(de) .headline { hyphens: manual; }
+
+.cta {
+  position: absolute; z-index: 6; display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 800; color: #fff; white-space: nowrap;
+  padding: 0 .9em; border-radius: 999px;
+  background: linear-gradient(180deg, var(--cta-top) 0%, #3fb52a 55%, var(--cta-bottom) 100%);
+  box-shadow: inset 0 .35em .5em -0.25em rgba(255,255,255,.55), inset 0 -.25em .4em -.1em rgba(0,60,0,.35),
+              0 .5vmin 1.6vmin rgba(20,90,20,.35);
+  text-shadow: 0 .06em .1em rgba(0,70,0,.35);
+}
+:lang(ar) .cta { font-weight: 800; padding-top: .12em; }
+
+/* ------------------------------------------------------------------ hero group */
+.hero { position: absolute; aspect-ratio: var(--hero-aspect); z-index: 3; }
+.hero > * { position: absolute; }
+.rabbit { inset-inline-start: 1.43%; top: 37.1%; width: 45.2%; z-index: 3; filter: drop-shadow(0 1.2vmin 1.6vmin rgba(20,50,90,.18)); }
+.sticker { z-index: 4; filter: drop-shadow(0 .8vmin 1.2vmin rgba(20,60,130,.22)); }
+.sticker.heart   { inset-inline-start: 26.8%; top: 11.4%; width: 12.6%; }
+.sticker.friends { inset-inline-start: 86.7%; top: 42.4%; width: 13%; }
+.sticker.smile   { inset-inline-start: 83.7%; top: 76.3%; width: 15.6%; }
+.phone-wrap { inset-inline-start: 68.7%; top: 48.2%; width: 52.4%; z-index: 2; container-type: inline-size;
+  transform: translate(-50%, -50%) rotate(3.5deg); }
+[dir="rtl"] .phone-wrap { transform: translate(50%, -50%) rotate(-3.5deg); }
+/* RTL: mirror the (text-free) plate so the untouched sky sits behind the copy
+   and the inpainted area stays behind the hero group. */
+/* (RTL plate mirroring happens inside background.js) */
+[dir="rtl"][data-layout="square"] .sticker.heart { top: 1%; }
+[dir="rtl"][data-layout="portrait"] .sticker.heart { inset-inline-start: 56%; top: 0%; }
+
+/* ------------------------------------------------------------------ phone UI (rebuilt; 1cqw = 1% phone width) */
+.phone {
+  container-type: inline-size; width: 100%; aspect-ratio: 440 / 1025; position: relative;
+  background: #fff; border-radius: 13cqw; overflow: hidden;
+  border: 2.4cqw solid #f3f6fb;
+  box-shadow: 0 0 0 .5cqw #dde5f1, 0 4cqw 9cqw rgba(16,55,120,.28), inset 0 0 1.2cqw rgba(120,140,170,.25);
+  font-family: var(--font-ui); color: var(--ui-text);
+  display: flex; flex-direction: column;
+}
+.phone .notch { position: absolute; top: 3.2cqw; left: 50%; width: 17cqw; height: 2.6cqw; transform: translateX(-50%); background: #e4e9f1; border-radius: 9cqw; }
+.p-status { display: flex; justify-content: space-between; align-items: center; padding: 6.4cqw 9cqw 0 11cqw; font-size: 3.7cqw; font-weight: 600; direction: ltr; }
+.p-status .icons { display: flex; gap: 1.4cqw; align-items: center; }
+.p-status svg { height: 3cqw; width: auto; }
+.p-top { display: flex; justify-content: space-between; align-items: center; padding: 5cqw 7.5cqw 0 7.5cqw; }
+.p-top .title { font-size: 5.6cqw; font-weight: 700; letter-spacing: -.01em; }
+.p-top svg { width: 5cqw; height: 5cqw; }
+.stories { display: flex; justify-content: space-between; padding: 4cqw 4.5cqw 0; }
+.story { display: flex; flex-direction: column; align-items: center; gap: 1.3cqw; width: 14cqw; }
+.story .ring { width: 12.6cqw; height: 12.6cqw; border-radius: 50%; border: .55cqw solid var(--ui-blue); padding: .7cqw; position: relative; display: grid; place-items: center; }
+.story .ring img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block; }
+.story .ring.add { color: var(--ui-blue); font-size: 9cqw; font-weight: 400; line-height: 1; }
+.story .ring:not(.add)::after { content: ""; position: absolute; right: -.4cqw; bottom: -.2cqw; width: 3.3cqw; height: 3.3cqw; border-radius: 50%; background: #3cc13b; border: .7cqw solid #fff; }
+.story span { font-size: 2.9cqw; color: var(--ui-text); white-space: nowrap; max-width: 15cqw; overflow: hidden; text-overflow: ellipsis; }
+.p-sep { height: .3cqw; background: var(--ui-line); margin: 3.2cqw 4cqw 0; }
+.post-h { display: flex; align-items: center; gap: 2.4cqw; padding: 3.2cqw 5.5cqw 0; }
+.post-h img { width: 8.8cqw; height: 8.8cqw; border-radius: 50%; }
+.post-h .who { flex: 1; display: flex; flex-direction: column; gap: .4cqw; }
+.post-h .who b { font-size: 3.5cqw; font-weight: 700; }
+.post-h .who small { font-size: 2.7cqw; color: var(--ui-muted); display: flex; align-items: center; gap: .8cqw; }
+.post-h .dots { color: #9aa3b2; font-size: 4cqw; letter-spacing: .2cqw; line-height: 0; }
+.photo { margin: 3.6cqw 4cqw 0; border-radius: 3.2cqw; overflow: hidden; aspect-ratio: 366 / 262; }
+.photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.reacts { display: flex; justify-content: space-between; align-items: center; padding: 4cqw 5.5cqw 0; font-size: 3.2cqw; color: var(--ui-muted); }
+.reacts .l { display: flex; align-items: center; gap: 1.6cqw; color: var(--ui-text); font-weight: 500; }
+.reacts .emo { display: flex; }
+.reacts .emo i { width: 4.6cqw; height: 4.6cqw; border-radius: 50%; border: .5cqw solid #fff; margin-inline-end: -1.2cqw; display: grid; place-items: center; color: #fff; }
+.reacts .emo svg { width: 62%; height: 62%; fill: #fff; }
+.actions { display: flex; justify-content: space-between; padding: 3.6cqw 5cqw 3.6cqw; margin: 3.4cqw 4cqw 0; border-top: .3cqw solid var(--ui-line); border-bottom: .3cqw solid var(--ui-line); font-size: 3.1cqw; color: #4b5466; }
+.actions span { display: flex; align-items: center; gap: 1.4cqw; white-space: nowrap; }
+.actions svg { width: 4.2cqw; height: 4.2cqw; }
+.card2 { margin: 4.4cqw 3cqw 0; border-radius: 3cqw; background: #fff; box-shadow: 0 .6cqw 2.4cqw rgba(30,60,110,.12); padding-bottom: 2.6cqw; }
+.card2 .post-h { padding-top: 2.8cqw; }
+.card2 p { font-size: 3.6cqw; padding: 3cqw 5.5cqw 0; font-weight: 500; }
+.minis { display: flex; gap: 2.4cqw; padding: 2.4cqw 5cqw 0; }
+.minis img { flex: 1; min-width: 0; height: 13cqw; object-fit: cover; border-radius: 1.8cqw; }
+.tabbar { margin-top: auto; display: flex; justify-content: space-around; align-items: flex-end; padding: 3cqw 8cqw 7.5cqw; }
+.tab { display: flex; flex-direction: column; align-items: center; gap: .9cqw; font-size: 2.8cqw; color: #4b5466; min-width: 11cqw; white-space: nowrap; }
+.tab svg { width: 5.4cqw; height: 5.4cqw; }
+.tab.on { color: var(--ui-blue); font-weight: 600; }
+.tab.plus span { display: grid; place-items: center; width: 9.6cqw; height: 9.6cqw; border-radius: 50%; background: var(--ui-blue); color: #fff; font-size: 7cqw; line-height: 1; margin-bottom: 1.6cqw; box-shadow: 0 1cqw 2cqw rgba(47,124,246,.35); }
+
+/* ================================================================== LAYOUTS
+   Every layout places: .brand, .headline, .cta, .hero (and may restyle).
+   Use inset-inline-* so RTL mirrors automatically.                          */
+
+/* ---- square (1200x1200 source; 300x250 mrec) */
+[data-layout="square"] { --mark: 13vmin; --brand-size: 7.3vmin; --plate-pos: 50% 50%; }
+[data-layout="square"] .brand { inset-inline-start: 4.8vw; top: 5.4vh; }
+[data-layout="square"] .headline { inset-inline-start: 5vw; top: 21.8vh; width: 44vw; height: 31.5vh; font-size: 11.6vmin; }
+[data-layout="square"] .cta { inset-inline-start: 3.6vw; top: 55vh; width: 29.6vw; height: 8.8vh; font-size: 4.9vmin; }
+[data-layout="square"] .hero { inset-inline-start: 30vw; top: 8.3vh; width: 70vw; }
+/* small square (300x250): drop the phone, rabbit carries the visual */
+[data-layout="square"][data-tier="sm"] .brand { top: 5vh; --mark: 15vmin; --brand-size: 8.4vmin; }
+[data-layout="square"][data-tier="sm"] .headline { top: 25vh; width: 52vw; height: 36vh; font-size: 13vmin; }
+[data-layout="square"][data-tier="sm"] .cta { top: 70vh; width: 44vw; height: 15vh; font-size: 6.6vmin; inset-inline-start: 4.6vw; }
+[data-layout="square"][data-tier="sm"] .hero { inset-inline-start: 39vw; top: -8vh; width: 88vw; }
+[data-layout="square"][data-tier="sm"] :is(.phone-wrap, .sticker.smile, .sticker.friends) { display: none; }
+[data-layout="square"][data-tier="sm"] .rabbit { inset-inline-start: 18%; top: 31%; width: 58%; }
+[data-layout="square"][data-tier="sm"] .sticker.heart { inset-inline-start: 58%; top: 34%; width: 16%; }
+
+/* ---- landscape (1200x628, 1920x1080): copy column + hero on the end side */
+[data-layout="landscape"] { --hero-h: 100vh; --mark: 14vh; --brand-size: 8.6vh; --plate-pos: 50% 62%; }
+[data-layout="landscape"] .hero { height: var(--hero-h); width: auto; inset-inline-end: 1.5vw; top: 3.5vh; }
+[data-layout="landscape"] .brand { inset-inline-start: 4.2vw; top: 7vh; }
+[data-layout="landscape"] .headline { inset-inline-start: 4.4vw; top: 29vh; height: 42vh;
+  width: calc(100vw - var(--H) * 1.0 * 0.7636 - 6vw); font-size: 15vh; }
+[data-layout="landscape"] .cta { inset-inline-start: 3.6vw; top: 76vh; height: 13.5vh; width: 56vh; font-size: 6.4vh; }
+[data-layout="landscape"] .sticker.friends { top: 30%; }
+
+/* ---- portrait 4:5 (1080x1350) */
+[data-layout="portrait"] { --mark: 13vw; --brand-size: 7.6vw; --plate-pos: 50% 50%; }
+[data-layout="portrait"] .brand { inset-inline-start: 5vw; top: 4.6vh; }
+[data-layout="portrait"] .headline { inset-inline-start: 5.4vw; top: 19vh; width: 50vw; height: 31vh; font-size: 12.4vw; }
+[data-layout="portrait"] .cta { inset-inline-start: 4.4vw; top: 53vh; width: 36vw; height: 8.4vh; font-size: 5.8vw; }
+[data-layout="portrait"] .hero { inset-inline-end: -4vw; bottom: -5vh; width: 80vw; }
+[data-layout="portrait"] .sticker.heart { inset-inline-start: 30%; top: 2%; width: 11%; }
+[data-layout="portrait"] .rabbit { inset-inline-start: 4%; top: 40%; }
+
+/* ---- story 9:16 (1080x1920) and half-page (300x600) */
+[data-layout="story"] { --mark: 14vw; --brand-size: 9vw; --plate-pos: 50% 50%; }
+[data-layout="story"] .brand { inset-inline-start: 7vw; top: 14.5vh; }
+[data-layout="story"] .headline { inset-inline-start: 7vw; top: 22.5vh; width: 86vw; height: 17vh; font-size: 13.4vw; }
+[data-layout="story"] .cta { inset-inline-start: 7vw; top: 41.5vh; width: 46vw; height: 6.2vh; font-size: 6.2vw; }
+[data-layout="story"] .hero { inset-inline-end: -4vw; bottom: -1vh; width: 92vw; }
+[data-layout="story"] .sticker.heart { inset-inline-start: 4%; top: 30%; }
+[data-layout="story"][data-tier="sm"] .brand { top: 4vh; --mark: 16vw; --brand-size: 9.6vw; }
+[data-layout="story"][data-tier="sm"] .headline { top: 16vh; height: 20vh; }
+[data-layout="story"][data-tier="sm"] .cta { top: 38.5vh; height: 7.6vh; width: 58vw; font-size: 7.2vw; }
+[data-layout="story"][data-tier="sm"] .hero { width: 100vw; inset-inline-end: -8vw; bottom: -2vh; }
+
+/* ---- skyscraper (160x600) */
+[data-layout="skyscraper"] { --mark: 44vw; --plate-pos: 30% 50%; }
+[data-layout="skyscraper"] .brand { inset-inline-start: 0; width: 100vw; top: 3vh; flex-direction: column; gap: 1.4vh; }
+[data-layout="skyscraper"] .wordmark { align-items: center; --brand-size: 15vw; }
+[data-layout="skyscraper"] .wordmark .sub { font-size: 9.2vw; }
+[data-layout="skyscraper"] .headline { inset-inline-start: 7vw; width: 86vw; top: 25vh; height: 23vh; font-size: 21vw; text-align: center; }
+[data-layout="skyscraper"] .cta { inset-inline-start: 8vw; width: 84vw; bottom: 3.4vh; height: 7.6vh; font-size: 11vw; padding: 0 .5em; }
+[data-layout="skyscraper"] .hero { position: static; }
+[data-layout="skyscraper"] :is(.phone-wrap, .sticker.friends, .sticker.smile) { display: none; }
+[data-layout="skyscraper"] .rabbit { inset-inline-start: 10vw; top: 50vh; width: 82vw; }
+[data-layout="skyscraper"] .sticker.heart { inset-inline-start: 64vw; top: 50vh; width: 28vw; }
+
+/* ---- billboard (970x250, 320x100): copy | rabbit | CTA */
+[data-layout="billboard"] { --mark: 36vh; --brand-size: 16vh; --plate-pos: 50% 30%; }
+[data-layout="billboard"] .brand { inset-inline-start: 3vw; top: 9vh; }
+[data-layout="billboard"] .headline { inset-inline-start: 3.4vw; top: 54vh; height: 38vh; width: 50vw; font-size: 30vh; --hl-valign: center; }
+[data-layout="billboard"] .cta { inset-inline-end: 3vw; top: 50%; transform: translateY(-50%); height: 30vh; width: 21vw; font-size: 12vh; }
+[data-layout="billboard"] .hero { position: static; }
+[data-layout="billboard"] :is(.phone-wrap, .sticker.friends, .sticker.smile) { display: none; }
+[data-layout="billboard"] .rabbit { inset-inline-start: 55vw; top: -30vh; width: 20.6vw; }
+[data-layout="billboard"] .sticker.heart { inset-inline-start: 52vw; top: 14vh; width: 9vh; width: 5.4vw; }
+[data-layout="billboard"][data-wb="s"] { --mark: 30vh; }
+[data-layout="billboard"][data-wb="s"] .brand { top: 7vh; inset-inline-start: 4vw; }
+[data-layout="billboard"][data-wb="s"] .brand .wordmark { display: none; }
+[data-layout="billboard"][data-wb="s"] .headline { inset-inline-start: 4vw; top: 42vh; width: 42vw; height: 52vh; font-size: 24vh; --hl-valign: center; }
+[data-layout="billboard"][data-wb="s"] .cta { inset-inline-start: 47vw; inset-inline-end: auto; top: auto; bottom: 12vh; transform: none; width: 30vw; height: 32vh; font-size: 12vh; }
+[data-layout="billboard"][data-wb="s"] .sticker.heart { display: none; }
+[data-layout="billboard"][data-wb="s"] .rabbit { inset-inline-start: 78vw; top: -12vh; width: 20vw; }
+
+/* ---- strip (728x90, 320x50): logo, one-line headline, CTA; rabbit peeks in on wider strips */
+[data-layout="strip"] { --mark: 72vh; --plate-pos: 50% 18%; }
+[data-layout="strip"] .brand { inset-inline-start: 1.6vw; top: 14vh; }
+[data-layout="strip"] .brand .wordmark { display: none; }
+[data-layout="strip"] .headline { inset-inline-start: calc(1.6vw + 80vh); top: 10vh; height: 80vh; width: calc(100vw - 80vh - 2vw - 24.5vw - 124vh); font-size: 42vh; --hl-valign: center; line-height: 1.05; }
+[data-layout="strip"] .cta { inset-inline-end: 2vw; top: 50%; transform: translateY(-50%); height: 56vh; width: 22vw; font-size: 24vh; padding: 0 .6em; }
+[data-layout="strip"] .hero { position: static; }
+[data-layout="strip"] :is(.phone-wrap, .sticker) { display: none; }
+[data-layout="strip"] .rabbit { inset-inline-end: 24.5vw; inset-inline-start: auto; top: 6vh; width: 120vh; }
+[data-layout="strip"][data-wb="s"] { --mark: 76vh; }
+[data-layout="strip"][data-wb="s"] .brand { top: 12vh; inset-inline-start: 2vw; }
+[data-layout="strip"][data-wb="s"] .headline { inset-inline-start: calc(2vw + 76vh + 2.4vw); width: calc(100vw - 76vh - 4.4vw - 33vw); font-size: 38vh; top: 8vh; height: 84vh; }
+[data-layout="strip"][data-wb="s"] .cta { width: 30vw; height: 62vh; font-size: 26vh; inset-inline-end: 2vw; }
+[data-layout="strip"][data-wb="s"] .rabbit { display: none; }
+</style>
+</head>
+<body>
+<div id="ad">
+  <canvas class="plate" id="scene"></canvas>
+
+  <div class="brand">
+    <img class="mark" src="work/layers/logo_mark.png" alt="">
+    <div class="wordmark" data-qa-group><span class="name" data-copy="brand_name">Rabbit</span><span class="sub" data-copy="brand_sub">Social Networks</span></div>
+  </div>
+
+  <h1 class="headline" data-fit data-fit-min="8"><span data-copy="headline">Meet friends <em>faster</em></span></h1>
+  <div class="cta" data-fit="line" data-fit-min="7" data-copy="cta" data-qa-solid>Start free</div>
+
+  <div class="hero">
+    <div class="phone-wrap" data-qa-decor>
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="p-status"><span>9:41</span><span class="icons">
+          <svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx=".6"/><rect x="5" y="5.5" width="3" height="6.5" rx=".6"/><rect x="10" y="3" width="3" height="9" rx=".6"/><rect x="15" y="0" width="3" height="12" rx=".6"/></svg>
+          <svg viewBox="0 0 16 12"><path d="M8 11.5 5.6 9a3.4 3.4 0 0 1 4.8 0zM3.4 6.9a6.5 6.5 0 0 1 9.2 0l-1.4 1.4a4.5 4.5 0 0 0-6.4 0zM1.2 4.6a9.6 9.6 0 0 1 13.6 0l-1.4 1.4a7.6 7.6 0 0 0-10.8 0z"/></svg>
+          <svg viewBox="0 0 26 12"><rect x=".5" y=".5" width="22" height="11" rx="3" fill="none" stroke="currentColor"/><rect x="2.5" y="2.5" width="18" height="7" rx="1.5"/><rect x="23.5" y="4" width="2" height="4" rx="1"/></svg>
+        </span></div>
+        <div class="p-top"><span class="title" data-copy="ui_home">Home</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 16V11a6 6 0 1 0-12 0v5l-2 2h16z"/><path d="M10 21a2 2 0 0 0 4 0"/></svg></div>
+        <div class="stories">
+          <div class="story"><div class="ring add">+</div><span data-copy="ui_your_story">Your story</span></div>
+          <div class="story"><div class="ring"><img src="work/layers/avatar_1.png" alt=""></div><span data-copy="name_1">Anna</span></div>
+          <div class="story"><div class="ring"><img src="work/layers/avatar_2.png" alt=""></div><span data-copy="name_2">Mike</span></div>
+          <div class="story"><div class="ring"><img src="work/layers/avatar_3.png" alt=""></div><span data-copy="name_3">Lily</span></div>
+          <div class="story"><div class="ring"><img src="work/layers/avatar_4.png" alt=""></div><span data-copy="name_4">James</span></div>
+          <div class="story"><div class="ring"><img src="work/layers/avatar_5.png" alt=""></div><span data-copy="name_5">Emma</span></div>
+        </div>
+        <div class="p-sep"></div>
+        <div class="post-h"><img src="work/layers/avatar_lily.png" alt="">
+          <div class="who"><b data-copy="ui_post_name_1">Lily</b><small><span data-copy="ui_time_1">2h ago</span> · <svg viewBox="0 0 12 12" width="1em" height="1em" fill="none" stroke="currentColor"><circle cx="6" cy="6" r="5"/><path d="M1 6h10M6 1c2 2 2 8 0 10M6 1c-2 2-2 8 0 10"/></svg></small></div>
+          <span class="dots">•••</span></div>
+        <div class="photo"><img src="work/layers/feed_photo.png" alt=""></div>
+        <div class="reacts"><span class="l"><span class="emo"><i style="background:#2f7cf6"><svg viewBox="0 0 24 24"><path d="M2 10h4v11H2zM8 21V10l4-8c2 0 3 1.5 2.5 3.5L13.5 9H20a2 2 0 0 1 2 2.4l-1.6 7.6a2.5 2.5 0 0 1-2.4 2z"/></svg></i><i style="background:#f0364f"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6-8 11-8 11z"/></svg></i><i style="background:#f7b125"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/></svg></i></span><span data-copy="ui_reactions">128</span></span><span data-copy="ui_comments">24 comments</span></div>
+        <div class="actions">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M7 10v11H3V10zM7 10l4-8a2.5 2.5 0 0 1 3 3l-1 4h6a2 2 0 0 1 2 2.4l-1.6 7A2 2 0 0 1 17.4 21H7"/></svg><span data-copy="ui_like">Like</span></span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span data-copy="ui_comment">Comment</span></span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M14 4l7 7-7 7v-4c-6 0-9 2-11 6 0-7 3-12 11-12z"/></svg><span data-copy="ui_share">Share</span></span>
+        </div>
+        <div class="card2">
+          <div class="post-h"><img src="work/layers/avatar_mike.png" alt="">
+            <div class="who"><b data-copy="ui_post_name_2">Mike</b><small><span data-copy="ui_time_2">3h ago</span> · <svg viewBox="0 0 12 12" width="1em" height="1em" fill="none" stroke="currentColor"><circle cx="6" cy="6" r="5"/><path d="M1 6h10M6 1c2 2 2 8 0 10M6 1c-2 2-2 8 0 10"/></svg></small></div>
+            <span class="dots">•••</span></div>
+          <p data-copy="ui_post_text">Awesome day with friends!</p>
+          <div class="minis"><img src="work/layers/mini_photo_1.png" alt=""><img src="work/layers/mini_photo_2.png" alt=""></div>
+        </div>
+        <div class="tabbar">
+          <div class="tab on"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z"/></svg><span data-copy="ui_tab_home">Home</span></div>
+          <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.8"/><path d="M2.5 20c.5-4 3.4-6 6.5-6s6 2 6.5 6zM15.5 14.2c3 0 5.5 1.8 6 5.3h-4.5"/></svg><span data-copy="ui_tab_friends">Friends</span></div>
+          <div class="tab plus"><span>+</span></div>
+          <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M4 5h16v11H10l-5 4v-4H4z"/><circle cx="8.5" cy="10.5" r=".6" fill="currentColor"/><circle cx="12" cy="10.5" r=".6" fill="currentColor"/><circle cx="15.5" cy="10.5" r=".6" fill="currentColor"/></svg><span data-copy="ui_tab_chat">Chat</span></div>
+          <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="4"/><path d="M4 21c.8-4.5 4-7 8-7s7.2 2.5 8 7z"/></svg><span data-copy="ui_tab_profile">Profile</span></div>
+        </div>
+      </div>
+    </div>
+    <img class="rabbit" src="work/layers/rabbit.png" alt="" data-qa="keepout" data-name="rabbit">
+    <img class="sticker heart" src="work/layers/sticker_heart.png" alt="" data-qa="keepout" data-name="heart">
+    <img class="sticker friends" src="work/layers/sticker_friends.png" alt="" data-qa="keepout" data-name="friends">
+    <img class="sticker smile" src="work/layers/sticker_smile.png" alt="" data-qa="keepout" data-name="smile">
+  </div>
+</div>
+<script src="scene-kit.js"></script>
+<script src="background.js"></script>
+<script src="ad-runtime.js"></script>
+</body>
+</html>

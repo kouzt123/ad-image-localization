@@ -1,0 +1,823 @@
+{
+  "schema_version": 1,
+  "folder": "final",
+  "instructions": "Record an actual visual review. Use pass, fail, or not_applicable for every check; set overall_status to approved, rejected, or flagged. Flagged requires notes and explicit risk acknowledgement.",
+  "items": [
+    {
+      "file": "rabbit-social-networks_ar_1080x1350_20260926.png",
+      "locale": "ar",
+      "market": "GCC",
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "pass",
+        "culture_awareness": "pass"
+      },
+      "notes": "Plate at native width with sky extended upward; heart sticker clear of headline. RTL-aware: copy right-aligned, hero mirrored to the start side, phone UI rebuilt RTL; wordmark kept LTR (protected brand); plate mirrored in-canvas. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_ar_1080x1920_20260926.png",
+      "locale": "ar",
+      "market": "GCC",
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "pass",
+        "culture_awareness": "pass"
+      },
+      "notes": "Sky extended upward (C1-continuous gradient); haze veil keeps accent word >= 3:1 contrast; text inside story safe zone. RTL-aware: copy right-aligned, hero mirrored to the start side, phone UI rebuilt RTL; wordmark kept LTR (protected brand); plate mirrored in-canvas. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_ar_1200x1200_20260926.png",
+      "locale": "ar",
+      "market": "GCC",
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "pass",
+        "culture_awareness": "pass"
+      },
+      "notes": "Faithful to source; phone UI rebuilt in HTML; source haze panel reproduced behind copy. RTL-aware: copy right-aligned, hero mirrored to the start side, phone UI rebuilt RTL; wordmark kept LTR (protected brand); plate mirrored in-canvas. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_ar_1200x628_20260926.png",
+      "locale": "ar",
+      "market": "GCC",
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "pass",
+        "culture_awareness": "pass"
+      },
+      "notes": "Native plate (quilted sides); rendered at 1.91:1, no crop. RTL-aware: copy right-aligned, hero mirrored to the start side, phone UI rebuilt RTL; wordmark kept LTR (protected brand); plate mirrored in-canvas. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_ar_160x600_20260926.png",
+      "locale": "ar",
+      "market": "GCC",
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "pass",
+        "culture_awareness": "pass"
+      },
+      "notes": "Stacked layout on extended sky with haze veil; small but legible type. RTL-aware: copy right-aligned, hero mirrored to the start side, phone UI rebuilt RTL; wordmark kept LTR (protected brand); plate mirrored in-canvas. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_ar_1920x1080_20260926.png",
+      "locale": "ar",
+      "market": "GCC",
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "pass",
+        "culture_awareness": "pass"
+      },
+      "notes": "Native 1920x1080 plate: ground quilted from untouched source texture, sky continued by row-profile model; no stretching. RTL-aware: copy right-aligned, hero mirrored to the start side, phone UI rebuilt RTL; wordmark kept LTR (protected brand); plate mirrored in-canvas. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_ar_300x250_20260926.png",
+      "locale": "ar",
+      "market": "GCC",
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "pass",
+        "culture_awareness": "pass"
+      },
+      "notes": "Phone dropped for legibility; rabbit crops at chin by design. RTL-aware: copy right-aligned, hero mirrored to the start side, phone UI rebuilt RTL; wordmark kept LTR (protected brand); plate mirrored in-canvas. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_ar_300x600_20260926.png",
+      "locale": "ar",
+      "market": "GCC",
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "pass",
+        "culture_awareness": "pass"
+      },
+      "notes": "Story layout at half-page size; phone UI decorative at this scale. RTL-aware: copy right-aligned, hero mirrored to the start side, phone UI rebuilt RTL; wordmark kept LTR (protected brand); plate mirrored in-canvas. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_ar_320x100_20260926.png",
+      "locale": "ar",
+      "market": "GCC",
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "pass",
+        "culture_awareness": "pass"
+      },
+      "notes": "Compact billboard; wordmark dropped, logo mark kept. RTL-aware: copy right-aligned, hero mirrored to the start side, phone UI rebuilt RTL; wordmark kept LTR (protected brand); plate mirrored in-canvas. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_ar_320x50_20260926.png",
+      "locale": "ar",
+      "market": "GCC",
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "pass",
+        "culture_awareness": "pass"
+      },
+      "notes": "Logo mark + fitted headline + CTA; rabbit dropped. RTL-aware: copy right-aligned, hero mirrored to the start side, phone UI rebuilt RTL; wordmark kept LTR (protected brand); plate mirrored in-canvas. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_ar_728x90_20260926.png",
+      "locale": "ar",
+      "market": "GCC",
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "pass",
+        "culture_awareness": "pass"
+      },
+      "notes": "One-line headline over sky band; rabbit peeks between copy and CTA. RTL-aware: copy right-aligned, hero mirrored to the start side, phone UI rebuilt RTL; wordmark kept LTR (protected brand); plate mirrored in-canvas. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_ar_970x250_20260926.png",
+      "locale": "ar",
+      "market": "GCC",
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "pass",
+        "culture_awareness": "pass"
+      },
+      "notes": "Copy | rabbit | CTA over sky band; phone dropped. RTL-aware: copy right-aligned, hero mirrored to the start side, phone UI rebuilt RTL; wordmark kept LTR (protected brand); plate mirrored in-canvas. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_de_1080x1350_20260926.png",
+      "locale": "de",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Plate at native width with sky extended upward; heart sticker clear of headline. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_de_1080x1920_20260926.png",
+      "locale": "de",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Sky extended upward (C1-continuous gradient); haze veil keeps accent word >= 3:1 contrast; text inside story safe zone. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_de_1200x1200_20260926.png",
+      "locale": "de",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Faithful to source; phone UI rebuilt in HTML; source haze panel reproduced behind copy. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_de_1200x628_20260926.png",
+      "locale": "de",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Native plate (quilted sides); rendered at 1.91:1, no crop. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_de_160x600_20260926.png",
+      "locale": "de",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Stacked layout on extended sky with haze veil; small but legible type. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_de_1920x1080_20260926.png",
+      "locale": "de",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Native 1920x1080 plate: ground quilted from untouched source texture, sky continued by row-profile model; no stretching. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_de_300x250_20260926.png",
+      "locale": "de",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Phone dropped for legibility; rabbit crops at chin by design. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_de_300x600_20260926.png",
+      "locale": "de",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Story layout at half-page size; phone UI decorative at this scale. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_de_320x100_20260926.png",
+      "locale": "de",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Compact billboard; wordmark dropped, logo mark kept. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_de_320x50_20260926.png",
+      "locale": "de",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Logo mark + fitted headline + CTA; rabbit dropped. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_de_728x90_20260926.png",
+      "locale": "de",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "One-line headline over sky band; rabbit peeks between copy and CTA. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_de_970x250_20260926.png",
+      "locale": "de",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Copy | rabbit | CTA over sky band; phone dropped. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_en_1080x1350_20260926.png",
+      "locale": "en",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Plate at native width with sky extended upward; heart sticker clear of headline. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_en_1080x1920_20260926.png",
+      "locale": "en",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Sky extended upward (C1-continuous gradient); haze veil keeps accent word >= 3:1 contrast; text inside story safe zone. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_en_1200x1200_20260926.png",
+      "locale": "en",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Faithful to source; phone UI rebuilt in HTML; source haze panel reproduced behind copy. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_en_1200x628_20260926.png",
+      "locale": "en",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Native plate (quilted sides); rendered at 1.91:1, no crop. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_en_160x600_20260926.png",
+      "locale": "en",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Stacked layout on extended sky with haze veil; small but legible type. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_en_1920x1080_20260926.png",
+      "locale": "en",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Native 1920x1080 plate: ground quilted from untouched source texture, sky continued by row-profile model; no stretching. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_en_300x250_20260926.png",
+      "locale": "en",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Phone dropped for legibility; rabbit crops at chin by design. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_en_300x600_20260926.png",
+      "locale": "en",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Story layout at half-page size; phone UI decorative at this scale. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_en_320x100_20260926.png",
+      "locale": "en",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Compact billboard; wordmark dropped, logo mark kept. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_en_320x50_20260926.png",
+      "locale": "en",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Logo mark + fitted headline + CTA; rabbit dropped. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_en_728x90_20260926.png",
+      "locale": "en",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "One-line headline over sky band; rabbit peeks between copy and CTA. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_en_970x250_20260926.png",
+      "locale": "en",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Copy | rabbit | CTA over sky band; phone dropped. DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_ja_1080x1350_20260926.png",
+      "locale": "ja",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Plate at native width with sky extended upward; heart sticker clear of headline. Phrase-aware line breaking (word-break:auto-phrase). DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_ja_1080x1920_20260926.png",
+      "locale": "ja",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Sky extended upward (C1-continuous gradient); haze veil keeps accent word >= 3:1 contrast; text inside story safe zone. Phrase-aware line breaking (word-break:auto-phrase). DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_ja_1200x1200_20260926.png",
+      "locale": "ja",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Faithful to source; phone UI rebuilt in HTML; source haze panel reproduced behind copy. Phrase-aware line breaking (word-break:auto-phrase). DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_ja_1200x628_20260926.png",
+      "locale": "ja",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Native plate (quilted sides); rendered at 1.91:1, no crop. Phrase-aware line breaking (word-break:auto-phrase). DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_ja_160x600_20260926.png",
+      "locale": "ja",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Stacked layout on extended sky with haze veil; small but legible type. Phrase-aware line breaking (word-break:auto-phrase). DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_ja_1920x1080_20260926.png",
+      "locale": "ja",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Native 1920x1080 plate: ground quilted from untouched source texture, sky continued by row-profile model; no stretching. Phrase-aware line breaking (word-break:auto-phrase). DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_ja_300x250_20260926.png",
+      "locale": "ja",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Phone dropped for legibility; rabbit crops at chin by design. Phrase-aware line breaking (word-break:auto-phrase). DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_ja_300x600_20260926.png",
+      "locale": "ja",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Story layout at half-page size; phone UI decorative at this scale. Phrase-aware line breaking (word-break:auto-phrase). DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_ja_320x100_20260926.png",
+      "locale": "ja",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Compact billboard; wordmark dropped, logo mark kept. Phrase-aware line breaking (word-break:auto-phrase). DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_ja_320x50_20260926.png",
+      "locale": "ja",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Logo mark + fitted headline + CTA; rabbit dropped. Phrase-aware line breaking (word-break:auto-phrase). DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_ja_728x90_20260926.png",
+      "locale": "ja",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "One-line headline over sky band; rabbit peeks between copy and CTA. Phrase-aware line breaking (word-break:auto-phrase). DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    },
+    {
+      "file": "rabbit-social-networks_ja_970x250_20260926.png",
+      "locale": "ja",
+      "market": null,
+      "production_method": "html_render",
+      "overall_status": "approved",
+      "checks": {
+        "copy_accuracy": "pass",
+        "brand_preservation": "pass",
+        "crop_safety": "pass",
+        "layout_legibility": "pass",
+        "rtl_flow": "not_applicable",
+        "culture_awareness": "pass"
+      },
+      "notes": "Copy | rabbit | CTA over sky band; phone dropped. Phrase-aware line breaking (word-break:auto-phrase). DOM QA incl. WCAG contrast: clean. Culture-aware QA: no market risk found.",
+      "risk_acknowledged": false
+    }
+  ]
+}

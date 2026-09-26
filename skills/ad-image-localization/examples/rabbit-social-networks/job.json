@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "creative_slug": "rabbit-social-networks",
+  "source": "source/rabbit-social-networks.png",
+  "languages": ["en", "de", "ja", {"locale": "ar", "market": "GCC"}],
+  "profile": "full-pack",
+  "protected_terms": ["Rabbit", "Social Networks"],
+  "rtl_mode": "auto",
+  "output": {"dir": "final", "extension": "png"},
+  "date": "20260926"
+}

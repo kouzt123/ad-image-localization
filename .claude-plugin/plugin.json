@@ -1,0 +1,10 @@
+{
+  "name": "ad-image-localization",
+  "version": "1.0.0",
+  "description": "Localize and resize ad image creatives with no image model: decompose, rebuild in HTML/CSS with live text, render every language x size (down to 320x50), QA, and package.",
+  "author": {"name": "kouzt123", "url": "https://github.com/kouzt123"},
+  "homepage": "https://github.com/kouzt123/ad-image-localization",
+  "repository": "https://github.com/kouzt123/ad-image-localization",
+  "license": "MIT",
+  "keywords": ["image-localization", "advertising", "ad-creatives", "rtl", "html-rendering", "agent-skill"]
+}

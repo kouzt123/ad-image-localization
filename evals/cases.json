@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "cases": [
+    {
+      "name": "standard_two_languages",
+      "job": {"creative_slug": "spring-launch", "source": "source.png", "languages": ["en", "de"],
+              "profile": "standard-delivery", "date": "20260714", "output_dir": "final"},
+      "expected": {"html_render": 10, "model_native": 0, "derived_crop": 0, "normalized_resize": 0, "deliverables": 10}
+    },
+    {
+      "name": "google_rtl",
+      "job": {"creative_slug": "search-launch", "source": "source.png", "languages": [{"locale": "ar", "market": "GCC"}],
+              "profile": "google-ads-image-assets", "date": "20260714", "output_dir": "final"},
+      "expected": {"html_render": 3, "model_native": 0, "derived_crop": 0, "normalized_resize": 0, "deliverables": 3}
+    },
+    {
+      "name": "same_ratio_export_is_normalized_not_rerendered",
+      "job": {"creative_slug": "social-launch", "source": "source.png", "languages": ["en"],
+              "profile": "standard-delivery", "date": "20260714", "output_dir": "final",
+              "extra_exports": [{"format": "square-1x1", "size": "1080x1080"}]},
+      "expected": {"html_render": 5, "model_native": 0, "derived_crop": 0, "normalized_resize": 1, "deliverables": 6}
+    },
+    {
+      "name": "iab_display_extreme_ratios",
+      "job": {"creative_slug": "display", "source": "source.png", "languages": ["ja"],
+              "profile": "iab-display", "date": "20260714", "output_dir": "final"},
+      "expected": {"html_render": 7, "model_native": 0, "derived_crop": 0, "normalized_resize": 0, "deliverables": 7}
+    }
+  ]
+}

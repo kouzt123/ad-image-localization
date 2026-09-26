@@ -1,0 +1,12 @@
+{
+  "name": "kouzt123-ad-image-localization",
+  "interface": {"displayName": "Kouzt123 · Ad Image Localization"},
+  "plugins": [
+    {
+      "name": "ad-image-localization",
+      "source": {"source": "url", "url": "https://github.com/kouzt123/ad-image-localization.git", "ref": "main"},
+      "policy": {"installation": "AVAILABLE", "authentication": "ON_INSTALL"},
+      "category": "Marketing"
+    }
+  ]
+}
